@@ -1,0 +1,70 @@
+<!-- Seokhyun Hong -->
+<!-- shong59@ucsc.edu -->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 1: Painting</title>
+        <script src="asg1.js"></script>
+        <script src="../lib/cuon-matrix.js"></script>
+        <script src="../lib/webgl-utils.js"></script>
+        <script src="../lib/webgl-debug.js"></script>
+        <script src="../lib/cuon-utils.js"></script>
+        <style>
+            #container {
+                display: flex;
+                align-items: flex-start;
+            }
+            #sketchImage {
+                margin-left: 20px;
+                border: 1px solid black;
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body onload="main()">
+        <div id="container">
+            <canvas id="webgl" width="400" height="400" style="border: 1px solid black;">
+                Please use a browser that supports "canvas"
+            </canvas>
+            <img id="sketchImage" width="400" height="400" src="image.png" alt="Cat Face Sketch">
+        </div>
+        <br><br>
+
+        <button id="clearButton">Clear Canvas</button>
+        <button id="catFaceButton">Draw Cat Face</button>
+        <button id="eyeTrackingButton">Cat Will Look At Your Cursor</button>
+        <br><br>
+
+        <div>
+            <strong>Drawing Mode:</strong><br>
+            <button id="pointButton">Squares</button>
+            <button id="triangleButton">Triangles</button>
+            <button id="circleButton">Circles</button>
+        </div>
+        <br>
+
+        <div>
+            <strong>Shape Color:</strong><br>
+            <label for="redS">Red</label>
+            <input type="range" id="redS" name="redS" min="0" max="100" step="1" value="100">
+            <label for="greenS">Green</label>
+            <input type="range" id="greenS" name="greenS" min="0" max="100" step="1" value="0">
+            <label for="blueS">Blue</label>
+            <input type="range" id="blueS" name="blueS" min="0" max="100" step="1" value="0">
+        </div>
+        <br>
+
+        <div>
+            <label for="sizeS">Shape Size:</label>
+            <input type="range" id="sizeS" name="sizeS" min="1" max="100" step="1" value="10">
+        </div>
+        <br>
+
+        <div>
+            <label for="segmentsS">(Circles) Segment Count:</label>
+            <input type="range" id="segmentsS" name="segmentsS" min="3" max="50" step="1" value="10">
+        </div>
+    </body>
+ </html>
