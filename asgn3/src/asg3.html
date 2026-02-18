@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 3 - Virtual World</title>
+        <style>
+            body { margin: 20px; font-family: Arial, sans-serif; }
+            canvas { border: 1px solid black; display: block; margin-bottom: 10px; }
+        </style>
+    </head>
+
+    <body onload="main()">
+        <h1>Assignment 3 - Virtual World</h1>
+
+        <canvas id="webgl" width="640" height="480">
+            Please use a browser that supports "canvas"
+        </canvas>
+
+        <div>
+            <p>FPS: <span id="fps">0</span></p>
+            <p><strong>Controls:</strong></p>
+            <p>W/A/S/D - Move | Q/E - Rotate | Mouse drag - Look around</p>
+            <p>F - Add block | R - Remove block</p>
+        </div>
+
+        <script src="../lib/cuon-utils.js"></script>
+        <script src="../lib/cuon-matrix.js"></script>
+        <script src="../lib/webgl-debug.js"></script>
+        <script src="../lib/webgl-utils.js"></script>
+
+        <script src="Cube.js"></script>
+        <script src="Camera.js"></script>
+        <script src="asg3.js"></script>
+    </body>
+</html>
